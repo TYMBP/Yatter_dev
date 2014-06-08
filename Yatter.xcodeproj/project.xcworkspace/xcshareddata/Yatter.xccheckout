@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1FC4CAF0-D15D-42CA-A385-E7A874D47D7C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Yatter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7F6BEF71-C4AF-4AE8-A21E-58DBB506BC22</key>
+		<string>ssh://github.com/TYMBP/Yatter_dev.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Yatter.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7F6BEF71-C4AF-4AE8-A21E-58DBB506BC22</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/TYMBP/Yatter_dev.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7F6BEF71-C4AF-4AE8-A21E-58DBB506BC22</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7F6BEF71-C4AF-4AE8-A21E-58DBB506BC22</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Yatter_dev</string>
+		</dict>
+	</array>
+</dict>
+</plist>

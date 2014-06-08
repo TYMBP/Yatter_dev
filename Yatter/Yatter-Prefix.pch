@@ -1,0 +1,59 @@
+//
+// Prefix header for all source files of the 'Yatter' target in the 'Yatter' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+  #import <UIKit/UIKit.h>
+  #import <Foundation/Foundation.h>
+  #import "YDefines.h"
+#endif
+
+#ifdef DEBUG
+  #define LOG(...) NSLog(__VA_ARGS__);
+  #define LOG_METHOD NSLog(@"%s", __func__);
+#else
+  #define LOG(...);
+  #define LOG_METHOD;
+#endif
+
+//* API *//
+// 別参照 //
+
+//SQL
+#define DB_FIME_NAME @"app.db"
+#define SQL_CREATE @"CREATE TABLE IF NOT EXISTS tweet (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, status TEXT, imgName TEXT, createdAt TEXT);"
+#define SQL_INSERT @"INSERT INTO tweet (user_id, status, imgName, createdAt) VALUES (?, ?, ?, ?);"
+#define SQL_DELETE @"DELETE FROM tweet;"
+#define SQL_SELECT @"SELECT * FROM  tweet;"
+
+//Following User
+#define SQL_FOLLOWING_CREATE @"CREATE TABLE IF NOT EXISTS following (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER, followerName TEXT, followerIcon TEXT);"
+#define SQL_FOLLOWING_INSERT @"INSERT INTO following (userId, followerName, followerIcon) VALUES (?, ?, ?);"
+#define SQL_FOLLOWING_DELETE @"DELETE FROM following;"
+#define SQL_FOLLOWING_SELECT @"SELECT * FROM  following;"
+#define SQL_FOLLOWING_SEARCH @"SELECT * FROM  following WHERE userId = ?;"
+
+//Mytweet
+#define SQL_MYTWEET_CREATE @"CREATE TABLE IF NOT EXISTS mytweet (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, status TEXT, imgName TEXT, createdAt TEXT);"
+#define SQL_MYTWEET_INSERT @"INSERT INTO mytweet (user_id, status, imgName, createdAt) VALUES (?, ?, ?, ?);"
+#define SQL_MYTWEET_DELETE @"DELETE FROM mytweet;"
+#define SQL_MYTWEET_SELECT @"SELECT * FROM  mytweet;"
+
+//UserList
+#define SQL_USERLIST_CREATE @"CREATE TABLE IF NOT EXISTS userList (id INTEGER PRIMARY KEY AUTOINCREMENT, userId INTEGER, userName TEXT, imgName TEXT, type INTEGER NOT NULL DEFAULT 0, FOREIGN KEY (type) REFERENCES enumVals(follow));"
+#define SQL_ENUM_CREATE @"CREATE TABLE IF NOT EXISTS enumVals (follow INTEGER PRIMARY KEY NOT NULL UNIQUE);"
+#define SQL_USERLIST_INSERT @"INSERT INTO userList (userId, userName, imgName, type) VALUES (?, ?, ?, ?);"
+#define SQL_ENUM_INSERT @"INSERT INTO enumVals (follow) VALUES (0),(1);"
+//#define SQL_USERLIST_UPDATE_REMOVE @"UPDATE userlist SET type(0) WHERE id= ?;"
+//#define SQL_USERLIST_UPDATE_FOLLOW @"UPDATE userlist SET type(1) WHERE id= ?;"
+#define SQL_USERLIST_DELETE @"DELETE FROM userlist;"
+#define SQL_ENUM_DELETE @"DELETE FROM enumVals;"
+#define SQL_USERLIST_SELECT @"SELECT * FROM  userlist;"
+#define SQL_FOREIGNKEY_CHECK @"PRAGMA foreign_keys;"
+#define SQL_FOREIGNKEY_SET @"PRAGMA foreign_keys=true;"
